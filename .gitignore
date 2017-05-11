@@ -9,3 +9,5 @@
 /Public
 /.*
 !/.gitignore
+!/.bash_profile
+
