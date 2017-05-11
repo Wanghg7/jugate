@@ -7,7 +7,9 @@
 /Music
 /Pictures
 /Public
+/VirtualBox VMs
+/WANGHG
 /.*
 !/.gitignore
+!/.vimrc
 !/.bash_profile
-
