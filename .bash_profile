@@ -8,4 +8,5 @@ export PS1=\\$\
 export PATH=~/bin:$PATH
 export PATH=$(echo ~/Applications/nexus-*/bin):$PATH
 export PATH=$(echo ~/Applications/apache-maven-*/bin):$PATH
+export PATH=$(echo ~/Applications/apache-ant-*/bin):$PATH
 

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if ! [ $# -eq 2 ]; then
+    echo "Usage: $0 tagname file"
+    exit -1
+fi
+
+FILE="$2"
+NAME=$(basename "$FILE")
+DIR=$(dirname "$FILE")
+META="$DIR/.${NAME}.meta"
+TEMP="$DIR/.temp"
+
+if ! [ -f "$META" ]; then
+    touch "$META"
+fi
+
+echo "$1" | cat "$META" - >"$TEMP"
+grep . "$TEMP" | tr ' ' '\n' | sort -u >"$META"
+

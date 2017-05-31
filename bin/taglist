@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if ! [ $# -eq 1 ]; then
+    echo "Usage: $0 tagname"
+    exit -1
+fi
+
+grep -l "$1" .*.meta | sed 's/^\.//;s/\.meta$//'
+
